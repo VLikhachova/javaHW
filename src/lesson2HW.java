@@ -10,6 +10,8 @@ public class lesson2HW {
         String ex="Example string";
         int r=(int)Math.floor(Math.random()*(max-min+1)+min);
         System.out.println(stringRep(ex, r));
+        int year=1600;
+        System.out.println(yearCheck(year));
     }
     public static boolean sumCheck(int a, int b) {
         boolean result;
@@ -35,6 +37,15 @@ public class lesson2HW {
         result=ex;
         for (int i=1; i<=r; i++)
             result=result+"\n"+ex;;
+        return result;
+    }
+    public static boolean yearCheck(int year){
+        boolean result;
+        if (year%4==0 || (year%400==0 && year%100==0)) {
+            result = true;
+        } else {
+        result = false;
+    }
         return result;
     }
 }
